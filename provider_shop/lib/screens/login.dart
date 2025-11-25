@@ -13,9 +13,9 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 'Welcome',
-                style: Theme.of(context).textTheme.displayLarge,
+                style: Theme.of(context).textTheme.displayLarge!,
               ),
               TextFormField(
                 decoration: const InputDecoration(hintText: 'Username'),
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 24.0),
               ElevatedButton(
                 onPressed: () {
-                  context.pushReplacement('/catalog');
+                  context.go('/catalog');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.yellow,
